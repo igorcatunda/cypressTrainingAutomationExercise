@@ -12,7 +12,7 @@ describe('Automation Exercise Website Test Suite', () => {
     it.only('Signs up an account', () => {
         signUpPage.getLoginSignUpButton();
         signUpPage.clickGetLoginSignUpButton();
-        signUpPage.fillUpForm('Going Ballistic', 'test@t357.com');
+        signUpPage.fillUpForm('Going Ballisticv2', 'test@7357.com');
         signUpPage.clickToSignUp();
         signUpPage.clickGender();
         signUpPage.setPassword('Test@1234');
@@ -20,5 +20,6 @@ describe('Automation Exercise Website Test Suite', () => {
         signUpPage.setCountry('Singapore');
         signUpPage.fillBasicInfo();
         signUpPage.clickToCreateAccount();
+        signUpPage.verifyAccountCreated();
     });
 });

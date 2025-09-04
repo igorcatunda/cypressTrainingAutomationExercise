@@ -42,5 +42,8 @@ export class SignUpPage {
     clickToCreateAccount(){
         cy.get('button[data-qa="create-account"]').should('have.text', 'Create Account').click();
     }
+    verifyAccountCreated(){
+         cy.url().should('eq', 'https://automationexercise.com/account_created'); // I could've asserted the 'Account Created' text, but I decided to go with URL to be more specific.
+    }
 }
 export const signUpPage = new SignUpPage();
